@@ -1,0 +1,27 @@
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: aliceblue;
+    border-bottom: 1px solid #ccc;
+}
+
+.header span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.header nav a {
+    color: #e1e1e6;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #555;
+}
