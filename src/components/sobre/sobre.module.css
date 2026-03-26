@@ -1,0 +1,65 @@
+.sobre {
+    background: linear-gradient(180deg, #000000 0%, #041668 100%);
+    padding: 4rem 2rem;
+    /* border-top: 1px solid #323238; */
+    /* border-bottom: 1px solid #323238; */
+}
+
+.sobreContainer {
+ max-width: 1120px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
+}
+
+@media (max-width: 768px) {
+ .sobreContainer {
+   grid-template-columns: 1fr;
+ }
+}
+
+.sobreText h2 {
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
+ color: #e1e1e6;
+}
+
+.sobreText p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ color: #c4c4cc;
+ margin-bottom: 1rem;
+}
+
+.skillsContainer h3 {
+ font-size: 1.5rem;
+ margin-bottom: 1.5rem;
+ color: #e1e1e6;
+}
+
+.grid {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1rem;
+}
+
+.gridCard {
+ background-color: #29292e;
+ padding: 0.8rem 1.5rem;
+ border-radius: 6px;
+ color: #00b37e;
+ border: 1px solid #323238;
+ font-size: 1rem;
+ font-weight: bold;
+ transition: transform 0.3s, background-color 0.3s, color 0.3s;
+ cursor: default;
+}
+
+.gridCard:hover {
+ background-color: #323238;
+ transform: translateY(-5px);
+ border: 1px solid #00b37e;
+}
+ 

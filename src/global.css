@@ -5,7 +5,11 @@
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: #ffffff;
+  /* color: #ffffff; */
   margin: 0;
 }
