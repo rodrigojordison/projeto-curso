@@ -1,28 +1,80 @@
+
 .projetosContainer {
-  background: linear-gradient(360deg, #000000 0%, #041668 100%);
-  padding: 4rem 2rem;
+  padding: 50px 20px;
+  background: linear-gradient(#041668, #000);
 }
 
-.projetosContainer h2 {
-  color: #fff;
+.projetosTitle {
   font-size: 2.5rem;
+  color: #ffffff;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 40px;
 }
 
 .projetosContent {
-  border: 2px dashed #323238;
-  border-radius: 8px;
-  height: 300px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  color: #7c7c8a;
 }
 
-.projetosContent p {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.projetoCard {
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  height: auto; /* menos altura para ficar proporcional */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 16 / 9; /* mantém a proporção do card */
+}
+
+.projetoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ISSO É O PRINCIPAL — faz a imagem cobrir o card corretamente */
+.projetoCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta a imagem para preencher sem distorcer */
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.projetoCard:hover img {
+  transform: scale(1.05); /* zoom suave no hover */
+}
+
+.links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* faixa escura sobre a imagem */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projetoCard:hover .links {
+  opacity: 1; /* links aparecem só no hover */
+}
+
+.links a {
+  color: #fff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+  color: #a855f7; /* roxo — troque pela cor do seu tema */
+  transform: scale(1.2);
 }
